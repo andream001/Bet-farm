@@ -1,0 +1,15 @@
+{
+  "name": "schrute-farms",
+  "version": "1.0.0",
+  "description": "Schrute Farms - The Fullstack Game",
+  "private": true,
+  "workspaces": ["packages/backend","packages/frontend"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=packages/backend\" \"npm run dev --workspace=packages/frontend\"",
+    "build": "npm run build --workspace=packages/backend && npm run build --workspace=packages/frontend",
+    "start": "npm run start --workspace=packages/backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
